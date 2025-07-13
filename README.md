@@ -1,0 +1,110 @@
+# "Magglow" - Magnetic Bullet Afterglow 
+
+A Julia module to calculate GRB afterglow light curves and spectra based on Magnetic Bullet model. 
+Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)](https://arxiv.org/abs/1909.11691). 
+Models are based on [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract).  
+<!-- This code is under active development.  -->
+
+<!-- Documentation is available at <https://afterglowpy.readthedocs.io/> -->
+
+## Attribution
+
+If you use this code in a publication, please refer to the package by name and cite [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)](https://arxiv.org/abs/1909.11691).
+
+The Magnetic Bullet model used in this code is successfully applied several afterglows, some of which can be found in the following works. 
+ - GRB 221009A: [Y. Kusafuka & K. Asano (2025)](https://ui.adsabs.harvard.edu/abs/2025arXiv250201437K/abstract)
+ - GRB 110213A: [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)]() ...
+ <!-- - GRB 080710A: [K. Obayashi, Y. Kusafuka, Y. Sudo, K. Asano, & R. Yamazaki (2025)]() ... -->
+
+## Features
+
+"Magglow" computes leptonic & hadronic emission from both forward & reverse shocks of a relativistic magnetized jet.  
+It includes:
+- Relativistic forward and reverse shock evolution 
+- Any stratified density medium
+- Equal arrival time surface
+- Arbitrary viewing angles
+- leptonic photon emission (synchrotron/SSC) 
+- hadronic neutrino production (pp collision/photo-meson interaction)
+- Internal absorption processes (SSA/gg absorption)
+- Klien-Nishina effects
+
+It does not include (yet):
+- Lateral spreading
+- Structured jet
+- Sedov-Taylor solution
+- Polarization
+- EBL absorption
+<!-- - Gravitational lensing -->
+
+## Installation/Building
+
+
+<!-- _afterglowpy_ is available via `pip`:
+```bash
+$ pip install afterglowpy
+```
+
+If you are working on a local copy of this repo and would like to install from source, you can the run the following from the top level directory of the project.
+```bash
+$ git clone https://github.com/yo3-sun/Magglow 
+``` -->
+
+## Using
+
+<!-- In your Julia code, import the library with `using Magglow`.  
+
+The main function of interest is`MagneticBulletAfterglow!(z,DL,t_in,nu_in,Input,Output)`. 
+See `example/LC_sample.jl` for a simple example.
+
+'z' is a source redshift.
+
+'DL' is a source luminosity distance. 
+
+`t_in` is an array of observed time.  
+
+`nu_in` is an array of observed frequency.
+
+For jet-like afterglows (`jetTypes` -2, -1, 0, 1, 2, and 4) `pars` has 14 positional arguments:
+- `1 E0` on-axis isotropic equivalent energy in erg
+- `2 thetaC` half-width of the jet core in radians (jetType specific)
+- `3 thetaW` "wing" truncation angle of the jet, in radians
+- `4 b` power for power-law structure, &theta;<sup>-b</sup>
+- `5 L0` Fiducial luminosity for energy injection, in erg/s, typically 0.
+- `6 q` Temporal power-law index for energy injection, typically 0.
+- `7 ts` Fiducial time-scale for energy injection, in seconds, typically 0.
+- `8 n0` Number density of ISM, in cm<sup>-3</sup>
+- `9 p` Electron distribution power-law index (p>2)
+- `10 epsilon_e` Thermal energy fraction in electrons
+- `11 epsilon_B` Thermal energy fraction in magnetic field
+- `12 xi_N` Fraction of electrons that get accelerated
+- `13 d_L` Luminosity distance in cm
+
+'Output' is an array of output observed flux which expresses
+- 1 e-synchrotron    Forward shock
+- 2 p-synchrotron    Forward shock
+- 3 e-SSC            Forward shock
+- 4 e-synchrotron    Reverse shock
+- 5 p-synchrotron    Reverse shock
+- 6 e-SSC            Reverse shock
+- 7 pp e-neutrino    Forward shock
+- 8 pp mu-neutrino   Forward shock
+- 9 pp pi0 gamma     Forward shock
+- 10 pg e-neutrino   Forward shock
+- 11 pg mu-neutrino  Forward shock
+- 12 pg pi0 gamma    Forward shock
+- 13 pp e-neutrino   Reverse shock
+- 14 pp mu-neutrino  Reverse shock
+- 15 pp pi0 gamma    Reverse shock
+- 16 pg e-neutrino   Reverse shock
+- 17 pg mu-neutrino  Reverse shock
+- 18 pg pi0 gamma    Reverse shock
+
+5 arguments of array `is_calc` expresses the radiation mechanism which you calculate. 
+- 1 electron synchrotron
+- 2 proton synchrotron
+- 3 electron SSC
+- 4 pp collision
+- 5 photo-meson interaction
+
+ -->
