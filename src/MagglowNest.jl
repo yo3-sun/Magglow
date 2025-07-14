@@ -11,26 +11,26 @@ using PyPlot
 pygui(false) 
 using DelimitedFiles
 using Printf
-# using LsqFit
 using Statistics
-# using SpecialFunctions
 using Revise
 using JSON
 pymultinest = pyimport("pymultinest.solve")
 
 # Getting arguments
+P_line = 20 # Define from number of P line in MagglowNest_sample.sh
+P_column = 5 # Define from number of P colum in MagglowNest_sample.sh
 version = ARGS[1]
 comment = ARGS[2]
-num_freq = length(ARGS[5:end])
-num_element = num_freq - 90
-num_data_file = num_element/3
-freq_str = ARGS[5:Int(5 + num_data_file - 1)]
-data_file = ARGS[Int(5 + num_data_file):Int(5 + 2 * num_data_file - 1)]
-color = ARGS[Int(5 + 2 * num_data_file):Int(5 + 3 * num_data_file- 1)]
-P_str = ARGS[Int(5 + 3 * num_data_file):end]
+args_after5 = length(ARGS[5:end])
+expept_P = args_after5 - P_line*P_column
+num_element = expept_P/3
+freq_str = ARGS[5:Int(5 + num_element - 1)]
+data_file = ARGS[Int(5 + num_element):Int(5 + 2 * num_element - 1)]
+color = ARGS[Int(5 + 2 * num_element):Int(5 + 3 * num_element- 1)]
+P_str = ARGS[Int(5 + 3 * num_element):end]
 
 freq = [parse(Float64, f) for f in freq_str]
-P = zeros(Float64, 18, 5)
+P = zeros(Float64, P_line, P_column)
 for (i, row) in enumerate(eachrow(P))
     row .= [parse(Float64, P_str[(i - 1) * 5 + j]) for j in 1:5]
 end

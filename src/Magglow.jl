@@ -1,6 +1,7 @@
 #=====================================================================================================#
 # This is the Magnetic Bullet Afterglow (Magglow) code written in Julia
-# Detailed information is written in Kusafuka, Obayashi, and Asano (2025)
+# This code is implemented by Yo Kusafuka
+# Detailed information is written in Kusafuka, Obayashi, Asano, and Yamazaki (2025)
 #=====================================================================================================#
 module Magglow
 export Magnetic_Bullet_Afterglow!

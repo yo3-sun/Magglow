@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# grb110213　=====================
 # Output file version & memo.
 version='sample'
 comment="Only 7 Parameter estimation for toy event"
