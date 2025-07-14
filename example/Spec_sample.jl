@@ -6,8 +6,8 @@ using Printf
 @pyimport matplotlib.animation as animation
 
 # Source Distance
-z=1.4607 # redshift
-DL=3.3020e28 # luminosity distance [cm]
+z=1.0 # redshift
+DL=2.1e28 # luminosity distance [cm]
 
 # Input Observed Time
 t_in=10 .^ range(log10(1e1), log10(1e6), length=100)
@@ -17,24 +17,24 @@ nu_in=10 .^ range(log10(1e9), log10(1e19), length=100)
 
 # Input parameters
 Input=Float64[
-    6e54   ,    # 1 initial energy E0 [erg]
-    12    ,    # 2 initial Lorentz factor G0 at R0
+    1e54   ,    # 1 initial energy E0 [erg]
+    100    ,    # 2 initial Lorentz factor G0 at R0
     5e0   ,    # 3 initial magnetization S0
-    1400*3e10  ,    # 4 initial radial width D0 [cm], which should be smaller than the initial radius R0
-    2e-1    ,    # 5 CSM number density n0 at R0 [/cc]
-    2      ,    # 6 density slope k (ISM:0 --- 2:wind)
+    300*3e10  ,    # 4 initial radial width D0 [cm], which should be smaller than the initial radius R0
+    1e0    ,    # 5 CSM number density n0 at R0 [/cc]
+    0      ,    # 6 density slope k (ISM:0 --- 2:wind)
     0.1    ,    # 7 energy fraction of accelerated electrons epsiron_e
     0.001   ,    # 8 energy fraction of Weibel induced magnetic field epsiron_B
-    2.5    ,    # 9 PD spectral index 2 < p < 3
-    0.4    ,    # 10 number fraction of accelerated electrons f_e
-    0.025    ,    # 11 opening angle theta_j
+    2.2    ,    # 9 PD spectral index 2 < p < 3
+    1.0    ,    # 10 number fraction of accelerated electrons f_e
+    0.1    ,    # 11 opening angle theta_j
     0.0    ,    # 12 viewing angle theta_o
     0.1    ,    # 13 energy fraction of accelerated electrons epsiron_e,RS
     0.001   ,    # 14 energy fraction of Weibel induced magnetic field epsiron_B,RS
-    2.01    ,    # 15 PD spectral index 2 < p_RS < 3
+    2.2    ,    # 15 PD spectral index 2 < p_RS < 3
     1.0    ,    # 16 number fraction of accelerated electrons f_e,RS
-    0.1    ,    # 17 energy fraction of accelerated protons epsiron_p,FS
-    0.01        # 18 number fraction of accelerated protons f_p,FS
+    0.1    ,    # 17 energy fraction of accelerated protons epsiron_p
+    0.01   ,    # 18 number fraction of accelerated protons f_p
     0.1    ,    # 19 energy fraction of accelerated protons epsiron_p,RS
     0.01        # 20 number fraction of accelerated protons f_p,RS
 ]
@@ -46,8 +46,8 @@ Output=[zeros(Float64,length(t_in),length(nu_in)) for i=1:18]
 is_calc=[
     true  , # 1 e-syn
     false , # 2 p-syn
-    true  , # 3 e-SSC
-    true , # 4 pp
+    false , # 3 e-SSC
+    false , # 4 pp
     false   # 5 pg
 ]
 
@@ -82,21 +82,13 @@ function Spectrum!(Syn,Synp,SSC,SynRS,SynpRS,SSCRS)
         ax.set_xscale("log")
         ax.set_yscale("log")
         
-        a1,=ax.plot(nu_in,1e26.*Syn[i,:],label="FS",color="red",linestyle="dashed")
-        # a2,=ax.plot(nu_in,nu_in.*SSC[i,:],label="e-SSC ",color="green",linestyle="dasehd")
-        # a3,=ax.plot(nu_in,nu_in.*Synp[i,:],label="p-synchrotron",color="blue",linestyle="dashed")
-        # a4,=ax.plot(nu_in,nu_in.*(Syn[i,:].+Synp[i,:].+SSC[i,:]),label="total",color="blue",linestyle="dashed")
-
-        a2,=ax.plot(nu_in,1e26.*SynRS[i,:],label="RS",color="blue",linestyle="dotted")
-        # ax.plot(nu_in,nu_in.*SSCRS[i,:],label="e-SSC ",color="green",linestyle="dotted")
-        # ax.plot(nu_in,nu_in.*SynpRS[i,:],label="p-synchrotron",color="blue",linestyle="dotted")
-        # ax.plot(nu_in,nu_in.*(SynRS[i,:].+SynpRS[i,:].+SSCRS[i,:]),label="total",color="blue",linestyle="dotted")
+        a1,=ax.plot(nu_in,1e26.*Syn[i,:],label="FS",color="red",linestyle="solid")
+        a2,=ax.plot(nu_in,1e26.*SynRS[i,:],label="RS",color="blue",linestyle="solid")
         
-        ax.set_ylim(1e-5,1e1)
+        ax.set_ylim(1e-3,1e3)
 
         ax.vlines(1e14,1e-24,1e-10)
 
-        # ax.set_ylabel(raw"$νF_ν$ [erg $cm^{-2}$ $s^{-1}$]")
         ax.set_ylabel(raw"$F_ν$ [mJy]")
         ax.set_xlabel(raw"frequency [Hz]")
         
@@ -109,11 +101,11 @@ function Spectrum!(Syn,Synp,SSC,SynRS,SynpRS,SSCRS)
         end
 
         aax = ax.secondary_xaxis("top", functions=(eV, Hz))
-        aax.set_xlabel("energy [eV]")
+        # aax.set_xlabel("energy [eV]")
 
         h1=[a1,a2]
         lab1=[q.get_label() for q in h1]
-        fig.legend(h1,lab1,bbox_to_anchor=(0.25, 0.86), loc="upper center", ncol=1, fontsize=13)
+        fig.legend(h1,lab1,bbox_to_anchor=(0.2, 0.86), loc="upper center", ncol=1, fontsize=13)
         
         time=@sprintf("%e",t_in[i])
 

@@ -48,8 +48,8 @@ Output=[zeros(Float64,length(t_in),length(nu_in)) for i=1:18]
 is_calc=[
     true  , # 1 e-syn
     false , # 2 p-syn
-    true  , # 3 e-SSC
-    true , # 4 pp
+    false , # 3 e-SSC
+    false , # 4 pp
     false   # 5 pg
 ]
 
@@ -80,18 +80,15 @@ function Lightcurve!(Syn,Synp,SSC,SynRS,SynpRS,SSCRS)
     ax.set_xscale("log")
     ax.set_yscale("log")
 
-    # a1,=ax.plot(t_obs,1e10*nu_in[1].*(Syn[:,1].+Synp[:,1].+SSC[:,1]),label=raw"$10^{9}$ Hz ($\times10^{18}$)",color="red")
-    # a2,=ax.plot(t_obs,1e8*nu_in[2].*(Syn[:,2].+Synp[:,2].+SSC[:,2]),label=raw"$10^{14}$ Hz ($\times10^{8}$)",color="blue")
-    # a3,=ax.plot(t_obs,1e2*nu_in[3].*(Syn[:,3].+Synp[:,3].+SSC[:,3]),label=raw"$10^{18}$ Hz ($\times10^2$)",color="green")
-    a1,=ax.plot(t_in,nu_in[1].*(Syn[:,1].+Synp[:,1].+SSC[:,1]),label=raw"Radio $10^{9}$ Hz ($\times1$)",color="red",linestyle="dashed")
-    a2,=ax.plot(t_in,nu_in[2].*(Syn[:,2].+Synp[:,2].+SSC[:,2]),label=raw"Optical $10^{14}$ Hz ($\times1$)",color="blue",linestyle="dashed")
-    a3,=ax.plot(t_in,nu_in[3].*(Syn[:,3].+Synp[:,3].+SSC[:,3]),label=raw"X-ray $10^{18}$ Hz ($\times1$)",color="green",linestyle="dashed")
-    ax.plot(t_in,nu_in[1].*(SynRS[:,1].+SynpRS[:,1].+SSCRS[:,1]),label=raw"$3.3\times10^{14}$ Hz ($\times1$)",color="red",linestyle="dotted")
-    ax.plot(t_in,nu_in[2].*(SynRS[:,2].+SynpRS[:,2].+SSCRS[:,2]),label=raw"$4.8\times10^{14}$ Hz ($\times1$)",color="blue",linestyle="dotted")
-    ax.plot(t_in,nu_in[3].*(SynRS[:,3].+SynpRS[:,3].+SSCRS[:,3]),label=raw"$7.3\times10^{16}$ Hz ($\times1$)",color="green",linestyle="dotted")
-    ax.plot(t_in,nu_in[1].*(Syn[:,1].+SynRS[:,1].+SSC[:,1].+SSCRS[:,1]),label=raw"$3.3\times10^{14}$ Hz ($\times1$)",color="red")
-    ax.plot(t_in,nu_in[2].*(Syn[:,2].+SynRS[:,2].+SSC[:,2].+SSCRS[:,2]),label=raw"$4.8\times10^{14}$ Hz ($\times1$)",color="blue")
-    ax.plot(t_in,nu_in[3].*(Syn[:,3].+SynRS[:,3].+SSC[:,3].+SSCRS[:,3]),label=raw"$7.3\times10^{16}$ Hz ($\times1$)",color="green")
+    a1,=ax.plot(t_in,nu_in[1].*(Syn[:,1].+Synp[:,1].+SSC[:,1]),label=raw"Radio $10^{9}$ Hz",color="red",linestyle="dashed")
+    a2,=ax.plot(t_in,nu_in[2].*(Syn[:,2].+Synp[:,2].+SSC[:,2]),label=raw"Optical $10^{14}$ Hz",color="blue",linestyle="dashed")
+    a3,=ax.plot(t_in,nu_in[3].*(Syn[:,3].+Synp[:,3].+SSC[:,3]),label=raw"X-ray $10^{18}$ Hz",color="green",linestyle="dashed")
+    ax.plot(t_in,nu_in[1].*(SynRS[:,1].+SynpRS[:,1].+SSCRS[:,1]),label=raw"$3.3\times10^{14}$ Hz",color="red",linestyle="dotted")
+    ax.plot(t_in,nu_in[2].*(SynRS[:,2].+SynpRS[:,2].+SSCRS[:,2]),label=raw"$4.8\times10^{14}$ Hz",color="blue",linestyle="dotted")
+    ax.plot(t_in,nu_in[3].*(SynRS[:,3].+SynpRS[:,3].+SSCRS[:,3]),label=raw"$7.3\times10^{16}$ Hz",color="green",linestyle="dotted")
+    ax.plot(t_in,nu_in[1].*(Syn[:,1].+SynRS[:,1].+SSC[:,1].+SSCRS[:,1]),label=raw"$3.3\times10^{14}$ Hz",color="red")
+    ax.plot(t_in,nu_in[2].*(Syn[:,2].+SynRS[:,2].+SSC[:,2].+SSCRS[:,2]),label=raw"$4.8\times10^{14}$ Hz",color="blue")
+    ax.plot(t_in,nu_in[3].*(Syn[:,3].+SynRS[:,3].+SSC[:,3].+SSCRS[:,3]),label=raw"$7.3\times10^{16}$ Hz",color="green")
 
     ax.set_xlim(1e0,1e6)
     ax.set_ylim(1e-27,1e-7)
