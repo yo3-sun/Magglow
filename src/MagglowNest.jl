@@ -12,7 +12,6 @@ pygui(false)
 using DelimitedFiles
 using Printf
 using Statistics
-using Revise
 using JSON
 pymultinest = pyimport("pymultinest.solve")
 

@@ -2,7 +2,6 @@ include("../src/Magglow.jl")
 using .Magglow
 using PyCall
 using PyPlot
-using Revise
 
 # Source Distance
 z=1.0 # redshift

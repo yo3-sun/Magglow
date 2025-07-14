@@ -4,7 +4,6 @@ using PyCall
 using PyPlot
 using Printf
 @pyimport matplotlib.animation as animation
-using Revise
 
 # Source Distance
 z=1.4607 # redshift

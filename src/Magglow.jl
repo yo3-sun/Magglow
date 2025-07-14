@@ -968,8 +968,8 @@ end
 ##### Input Arguments ######
 
 # Input Distance
-# z=1.4607 # redshift
-# DL=3.3020e28 # luminosity distance [cm]
+# z=1.0 # cosmological redshift
+# DL=2.1e28 # luminosity distance [cm]
 
 # Input Observed Time
 # t_in=10 .^ range(log10(1e1), log10(1e6), length=100)
@@ -983,24 +983,24 @@ end
 
 # Input parameters
 # Input=Float64[
-#     6e54   ,    # 1 initial energy E0 [erg]
-#     12    ,    # 2 initial Lorentz factor G0 at R0
-#     5e0   ,    # 3 initial magnetization S0
-#     1400*c  ,    # 4 initial radial width D0 [cm], which should be smaller than the initial radius R0
-#     2e-1    ,    # 5 CSM number density n0 at R0 [/cc]
-#     2      ,    # 6 density slope k (ISM:0 --- 2:wind)
+#     1e53   ,    # 1 initial energy E0 [erg]
+#     100    ,    # 2 initial Lorentz factor G0 at R0
+#     1e-3   ,    # 3 initial magnetization S0
+#     100*c  ,    # 4 initial radial width D0 [cm], which should be smaller than the initial radius R0
+#     1e0    ,    # 5 CSM number density n0 at R0 [/cc]
+#     0      ,    # 6 density slope k (ISM:0 --- 2:wind)
 #     0.1    ,    # 7 energy fraction of accelerated electrons epsiron_e,FS
-#     0.001   ,    # 8 energy fraction of Weibel induced magnetic field epsiron_B,FS
-#     2.5    ,    # 9 PD spectral index 2 < p_FS < 3
-#     0.4    ,    # 10 number fraction of accelerated electrons f_e,FS
-#     0.025    ,    # 11 opening angle theta_j
+#     0.01   ,    # 8 energy fraction of Weibel induced magnetic field epsiron_B,FS
+#     2.2    ,    # 9 PD spectral index 2 < p_FS < 3
+#     1.0    ,    # 10 number fraction of accelerated electrons f_e,FS
+#     0.1    ,    # 11 opening angle theta_j
 #     0.0    ,    # 12 viewing angle theta_o
 #     0.1    ,    # 13 energy fraction of accelerated electrons epsiron_e,RS
-#     0.001   ,    # 14 energy fraction of Weibel induced magnetic field epsiron_B,RS
-#     2.01    ,    # 15 PD spectral index 2 < p_RS < 3
+#     0.01   ,    # 14 energy fraction of Weibel induced magnetic field epsiron_B,RS
+#     2.2    ,    # 15 PD spectral index 2 < p_RS < 3
 #     1.0    ,    # 16 number fraction of accelerated electrons f_e,RS
 #     0.1    ,    # 17 energy fraction of accelerated protons epsiron_p,FS
-#     0.01        # 18 number fraction of accelerated protons f_p,FS
+#     0.01   ,    # 18 number fraction of accelerated protons f_p,FS
 #     0.1    ,    # 19 energy fraction of accelerated protons epsiron_p,RS
 #     0.01        # 20 number fraction of accelerated protons f_p,RS
 # ]
