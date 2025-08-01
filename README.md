@@ -50,10 +50,10 @@ It does not include (yet):
 
 If you are working on a local copy of this repo and would like to install from source, you can the run the following from the top level directory of the project.
 ```bash
-$ git clone https://github.com/yo3-sun/Magglow.git 
+$ git clone https://github.com/yo3-sun/Magglow.git
 ```
 
-## Using
+## Usage
 
 In your Julia code, import the library with 
 ```
@@ -73,27 +73,31 @@ See `example/LC_sample.jl` for a simple example.
 
 `nu_in` is an array of observed frequency.
 
+
+    0.1    ,    # 19 energy fraction of accelerated protons epsiron_p,RS
+    0.01        # 20 number fraction of accelerated protons f_p,RS
+
 `Input` has 20 arguments:
 - `1 E0` isotropic equivalent energy in erg
-- `2 thetaC` half-width of the jet core in radians (jetType specific)
-- `3 thetaW` "wing" truncation angle of the jet, in radians
-- `4 b` power for power-law structure, &theta;<sup>-b</sup>
-- `5 L0` Fiducial luminosity for energy injection, in erg/s, typically 0.
-- `6 q` Temporal power-law index for energy injection, typically 0.
+- `2 G0` initial Loretnz factor at R0
+- `3 S0` initial magnetization at R0
+- `4 D0` initial thickness, in cm
+- `5 n0` CSM number density at R0, in cm<sup>-3</sup>
+- `6 k`  density slope (ISM:0 --- 2:wind)
 - `7 ts` Fiducial time-scale for energy injection, in seconds, typically 0.
 - `8 n0` Number density of ISM, in cm<sup>-3</sup>
-- `9 p` Electron distribution power-law index (p>2)
-- `10 epsilon_e` Thermal energy fraction in electrons
-- `11 epsilon_B` Thermal energy fraction in magnetic field
-- `12 xi_N` Fraction of electrons that get accelerated
-- `13 d_L` Luminosity distance in cm
-- `14 d_L` Luminosity distance in cm
-- `15 d_L` Luminosity distance in cm
-- `16 d_L` Luminosity distance in cm
-- `17 d_L` Luminosity distance in cm
-- `18 d_L` Luminosity distance in cm
-- `19 d_L` Luminosity distance in cm
-- `20 d_L` Luminosity distance in cm
+- `9 epsiron_e` thermal energy fraction in electrons for FS
+- `10 epsilon_B` thermal energy fraction in magnetic field for FS
+- `11 p` particle spectral index for FS (p>2)
+- `12 fe` fraction of electrons that get accelerated for FS
+- `13 theta_j` opening angle, in rad
+- `14 theta_o` viewing angle, in rad
+- `15 epsiron_e,RS` thermal energy fraction in electrons for RS
+- `16 epsilon_B,RS` thermal energy fraction in magnetic field for RS
+- `17 p_RS` particle spectral index for RS (p>2)
+- `18 fe_RS` fraction of electrons that get accelerated for RS
+- `19 epsiron_p,RS` thermal energy fraction in protons for RS
+- `20 fp_RS` fraction of protons that get accelerated for RS
 
 `Output` is an array of output observed flux:
 - `1  FS e-synchrotron`    Forward shock
