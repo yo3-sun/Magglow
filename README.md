@@ -54,6 +54,7 @@ using .Magglow
 ```
 
 The main function of interest is `MagneticBulletAfterglow!(z,DL,t_in,nu_in,Input,Output)`. 
+
 See `example/LC_sample.jl` for a simple example.
 
 `z` is a source redshift.
@@ -87,24 +88,24 @@ See `example/LC_sample.jl` for a simple example.
 - `20 d_L` Luminosity distance in cm
 
 `Output` is an array of output observed flux:
-- `1 e-synchrotron`    Forward shock
-- `2 p-synchrotron`    Forward shock
-- `3 e-SSC`            Forward shock
-- `4 e-synchrotron`    Reverse shock
-- `5 p-synchrotron`    Reverse shock
-- `6 e-SSC`            Reverse shock
-- `7 pp e-neutrino`    Forward shock
-- `8 pp mu-neutrino`   Forward shock
-- `9 pp pi0 gamma`     Forward shock
-- `10 pg e-neutrino`   Forward shock
-- `11 pg mu-neutrino`  Forward shock
-- `12 pg pi0 gamma`    Forward shock
-- `13 pp e-neutrino`   Reverse shock
-- `14 pp mu-neutrino`  Reverse shock
-- `15 pp pi0 gamma`    Reverse shock
-- `16 pg e-neutrino`   Reverse shock
-- `17 pg mu-neutrino`  Reverse shock
-- `18 pg pi0 gamma`    Reverse shock
+- `1  FS e-synchrotron`    Forward shock
+- `2  FS p-synchrotron`    Forward shock
+- `3  FS e-SSC`            Forward shock
+- `4  RS e-synchrotron`    Reverse shock
+- `5  RS p-synchrotron`    Reverse shock
+- `6  RS e-SSC`            Reverse shock
+- `7  FS pp e-neutrino`    Forward shock
+- `8  FS pp mu-neutrino`   Forward shock
+- `9  FS pp pi0 gamma`     Forward shock
+- `10 FS pg e-neutrino`   Forward shock
+- `11 FS pg mu-neutrino`  Forward shock
+- `12 FS pg pi0 gamma`    Forward shock
+- `13 RS pp e-neutrino`   Reverse shock
+- `14 RS pp mu-neutrino`  Reverse shock
+- `15 RS pp pi0 gamma`    Reverse shock
+- `16 RS pg e-neutrino`   Reverse shock
+- `17 RS pg mu-neutrino`  Reverse shock
+- `18 RS pg pi0 gamma`    Reverse shock
 
 5 arguments of array `is_calc` expresses the radiation processes: 
 - `1 electron synchrotron`
