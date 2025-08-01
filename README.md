@@ -145,4 +145,4 @@ See `example/LC_sample.jl` for a simple example.
 You can estimate several parameters using **Magglow** by incorporated with statistical analysis tools such as Monte Carlo or nested sampling method.
 **MagglowNest** is a sample parameter estimation Bayesian interface by [MultiNest](https://github.com/JohannesBuchner/MultiNest). 
 We provide some example data files in the `data` folder. Please keep your copy as the original repository to ensure all data paths work correctly. 
-Please see a sample job script file in `example/MagglowNest_sample.sh` for usage.
+A sample job script file in `example/MagglowNest_sample.sh` may also be useful.
