@@ -3,7 +3,7 @@
 <img align="left" width="422" height="321" alt="Image" src="https://github.com/user-attachments/assets/d63eb294-e4f5-47cd-b972-8359382bf4f8" />
 
 **Magglow** is a Julia module to calculate Gamma-ray Burst (GRB) afterglow light curves and spectra based on Magnetic Bullet model [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract). 
-The framework implements semi-analytic models for forward and reverse shock dynamics propagating in a stratified CSM, leptonic (synchrotron with self-absorption and self-Compton scattering with Klein-Nishina corrections) and hadronic (pp colisions and photomeson interactions) multimessenger emission mechnisms, and arbitrary viewing angle.
+The framework implements semi-analytic models for forward and reverse shock dynamics propagating in a stratified CSM and leptonic (synchrotron with self-absorption and self-Compton scattering with Klein-Nishina corrections) and hadronic (pp colisions and photomeson interactions) multimessenger emission mechnisms observed from arbitrary viewing angle.
 
 Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)](). 
 <!-- This code is under active development.  -->
@@ -14,7 +14,9 @@ Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R.
 
 ## Attribution
 
-If you use this code in a publication, please refer to the package by name and cite [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]().
+If you use this code in a publication, please cite the relevant papers:
+- [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract)
+- [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]().
 
 The Magnetic Bullet model used in this code is successfully applied several afterglows, some of which can be found in the following works. 
  - GRB 221009A: [Y. Kusafuka & K. Asano (2025)](https://ui.adsabs.harvard.edu/abs/2025arXiv250201437K/abstract)
