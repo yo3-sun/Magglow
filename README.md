@@ -74,7 +74,7 @@ See `example/LC_sample.jl` for a simple example.
 `nu_in` is an array of observed frequency.
 
 `Input` has 20 arguments:
-- `1 E0` \ \ isotropic equivalent energy in erg
+- `1 E0`       isotropic equivalent energy in erg
 - `2 G0` initial Loretnz factor 
 - `3 S0` initial magnetization 
 - `4 D0` initial thickness, in cm
