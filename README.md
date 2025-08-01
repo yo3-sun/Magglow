@@ -75,7 +75,7 @@ See `example/LC_sample.jl` for a simple example.
 
 `Input` has 20 arguments:
 <details>
-<summary>20 arguments <i>(click to expand/collapse)</i></summary>
+20 arguments <i>(click to expand/collapse)</i>
 <br>
 
 - `1 E0` isotropic equivalent energy in erg
