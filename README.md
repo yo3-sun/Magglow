@@ -74,7 +74,11 @@ See `example/LC_sample.jl` for a simple example.
 `nu_in` is an array of observed frequency.
 
 `Input` has 20 arguments:
-- `1 E0`       isotropic equivalent energy in erg
+<details>
+<summary>20 arguments <i>(click to expand/collapse)</i></summary>
+<br>
+
+- `1 E0` isotropic equivalent energy in erg
 - `2 G0` initial Loretnz factor 
 - `3 S0` initial magnetization 
 - `4 D0` initial thickness, in cm
@@ -95,25 +99,27 @@ See `example/LC_sample.jl` for a simple example.
 - `19 epsiron_p,RS` thermal energy fraction in protons for RS
 - `20 fp_RS` fraction of protons that get accelerated for RS
 
+</details>
+
 `Output` is an array of output observed flux:
-- `1  FS e-synchrotron`    Forward shock
-- `2  FS p-synchrotron`    Forward shock
-- `3  FS e-SSC`            Forward shock
-- `4  RS e-synchrotron`    Reverse shock
-- `5  RS p-synchrotron`    Reverse shock
-- `6  RS e-SSC`            Reverse shock
-- `7  FS pp e-neutrino`    Forward shock
-- `8  FS pp mu-neutrino`   Forward shock
-- `9  FS pp pi0 gamma`     Forward shock
-- `10 FS pg e-neutrino`   Forward shock
-- `11 FS pg mu-neutrino`  Forward shock
-- `12 FS pg pi0 gamma`    Forward shock
-- `13 RS pp e-neutrino`   Reverse shock
-- `14 RS pp mu-neutrino`  Reverse shock
-- `15 RS pp pi0 gamma`    Reverse shock
-- `16 RS pg e-neutrino`   Reverse shock
-- `17 RS pg mu-neutrino`  Reverse shock
-- `18 RS pg pi0 gamma`    Reverse shock
+- `1  FS e-synchrotron`    
+- `2  FS p-synchrotron`   
+- `3  FS e-SSC`           
+- `4  RS e-synchrotron`   
+- `5  RS p-synchrotron`  
+- `6  RS e-SSC`            
+- `7  FS pp e-neutrino`    
+- `8  FS pp mu-neutrino` 
+- `9  FS pp pi0 gamma`   
+- `10 FS pg e-neutrino`  
+- `11 FS pg mu-neutrino` 
+- `12 FS pg pi0 gamma`    
+- `13 RS pp e-neutrino`  
+- `14 RS pp mu-neutrino`  
+- `15 RS pp pi0 gamma`   
+- `16 RS pg e-neutrino`   
+- `17 RS pg mu-neutrino`  
+- `18 RS pg pi0 gamma`    
 
 5 arguments of array `is_calc` expresses the radiation processes: 
 - `1 electron synchrotron`
