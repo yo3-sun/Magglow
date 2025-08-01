@@ -87,8 +87,6 @@ function Spectrum!(Syn,Synp,SSC,SynRS,SynpRS,SSCRS)
         
         ax.set_ylim(1e-3,1e3)
 
-        ax.vlines(1e14,1e-24,1e-10)
-
         ax.set_ylabel(raw"$F_ν$ [mJy]")
         ax.set_xlabel(raw"frequency [Hz]")
         
