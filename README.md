@@ -1,7 +1,7 @@
 # "Magglow" - Magnetic Bullet Afterglow 
 
 A Julia module to calculate GRB afterglow light curves and spectra based on Magnetic Bullet model. 
-Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)](). 
+Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)](). 
 Models are based on [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract).  
 <!-- This code is under active development.  -->
 
@@ -9,16 +9,17 @@ Models are based on [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.ed
 
 ## Attribution
 
-If you use this code in a publication, please refer to the package by name and cite [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)]().
+If you use this code in a publication, please refer to the package by name and cite [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]().
 
 The Magnetic Bullet model used in this code is successfully applied several afterglows, some of which can be found in the following works. 
  - GRB 221009A: [Y. Kusafuka & K. Asano (2025)](https://ui.adsabs.harvard.edu/abs/2025arXiv250201437K/abstract)
- - GRB 110213A: [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)]() ...
+ - GRB 110213A: [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]() ...
  <!-- - GRB 080710A: [K. Obayashi, Y. Kusafuka, Y. Sudo, K. Asano, & R. Yamazaki (2025)]() ... -->
 
 ## Features
 
 "Magglow" computes leptonic & hadronic emission from both forward & reverse shocks of a relativistic magnetized jet.  
+<img width="587" height="446" alt="Image" src="https://github.com/user-attachments/assets/d63eb294-e4f5-47cd-b972-8359382bf4f8" />
 It includes:
 - Relativistic forward and reverse shock evolution 
 - Any stratified density medium
