@@ -22,7 +22,7 @@ The Magnetic Bullet model used in this code is successfully applied several afte
 
 "Magglow" computes leptonic & hadronic emission from both forward & reverse shocks of a relativistic magnetized jet based on Magnetic Bullet model.  
 
-<img width="587" height="446" alt="Image" src="https://github.com/user-attachments/assets/d63eb294-e4f5-47cd-b972-8359382bf4f8" />
+<img width="293" height="223" alt="Image" src="https://github.com/user-attachments/assets/d63eb294-e4f5-47cd-b972-8359382bf4f8" />
 
 It includes:
 - Relativistic forward and reverse shock evolution 
