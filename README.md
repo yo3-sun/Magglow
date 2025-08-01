@@ -73,9 +73,8 @@ See `example/LC_sample.jl` for a simple example.
 
 `nu_in` is an array of observed frequency.
 
-`Input` has 20 arguments:
-<details>
-20 arguments <i>(click to expand/collapse)</i>
+`Input` has 20 arguments: <details>
+<summary>20 arguments <i>(click to expand/collapse)</i></summary>
 <br>
 
 - `1 E0` isotropic equivalent energy in erg
