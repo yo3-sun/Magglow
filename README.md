@@ -25,7 +25,7 @@ If you use this code in your research, please cite the relevant papers:
 
 ## Features
 
-"Magglow" computes leptonic & hadronic emission from both forward & reverse shocks of a relativistic magnetized jet based on Magnetic Bullet model.  
+**Magglow** computes leptonic & hadronic emission from both forward & reverse shocks of a relativistic magnetized jet based on Magnetic Bullet model.  
 
 It includes:
 - Relativistic forward and reverse shock evolution 
@@ -127,7 +127,7 @@ See `example/LC_sample.jl` for a simple example.
 
 </details>
 
-5 arguments of array `is_calc` expresses the radiation processes.
+`is_calc` expresses the radiation processes.
 <details>
 <summary>arguments list <i>(click to expand/collapse)</i></summary>
 <br>
@@ -139,3 +139,10 @@ See `example/LC_sample.jl` for a simple example.
 - `5 photo-meson interaction`
 
 </details>
+
+## Parameter Estimation
+
+You can estimate several parameters using **Magglow** by incorporated with statistical analysis tools such as Monte Carlo or nested sampling method.
+**MagglowNest** is a sample parameter estimation Bayesian interface by [MultiNest](https://github.com/JohannesBuchner/MultiNest). 
+We provide some example data files in the `data` folder. Please keep your copy as the original repository to ensure all data paths work correctly. 
+Please see a sample job script file in `example/MagglowNest_sample.sh` for usage.
