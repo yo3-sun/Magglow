@@ -73,16 +73,12 @@ See `example/LC_sample.jl` for a simple example.
 
 `nu_in` is an array of observed frequency.
 
-
-    0.1    ,    # 19 energy fraction of accelerated protons epsiron_p,RS
-    0.01        # 20 number fraction of accelerated protons f_p,RS
-
 `Input` has 20 arguments:
-- `1 E0` isotropic equivalent energy in erg
-- `2 G0` initial Loretnz factor at R0
-- `3 S0` initial magnetization at R0
+- `1 E0`        isotropic equivalent energy in erg
+- `2 G0` initial Loretnz factor 
+- `3 S0` initial magnetization 
 - `4 D0` initial thickness, in cm
-- `5 n0` CSM number density at R0, in cm<sup>-3</sup>
+- `5 n0` CSM number density, in cm<sup>-3</sup>
 - `6 k`  density slope (ISM:0 --- 2:wind)
 - `7 ts` Fiducial time-scale for energy injection, in seconds, typically 0.
 - `8 n0` Number density of ISM, in cm<sup>-3</sup>
