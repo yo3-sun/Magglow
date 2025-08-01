@@ -12,16 +12,16 @@ Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R.
 
 <br clear="left"/>
 
-## Attribution
-
-If you use this code in a publication, please cite the relevant papers:
-- [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract)
-- [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]().
-
 The Magnetic Bullet model used in this code is successfully applied several afterglows, some of which can be found in the following works. 
  - GRB 221009A: [Y. Kusafuka & K. Asano (2025)](https://ui.adsabs.harvard.edu/abs/2025arXiv250201437K/abstract)
  - GRB 110213A: [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]() ...
  <!-- - GRB 080710A: [K. Obayashi, Y. Kusafuka, Y. Sudo, K. Asano, & R. Yamazaki (2025)]() ... -->
+
+## Attribution
+
+If you use this code in your research, please cite the relevant papers:
+- [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract)
+- [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (in prep)]().
 
 ## Features
 
