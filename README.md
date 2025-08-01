@@ -73,8 +73,9 @@ See `example/LC_sample.jl` for a simple example.
 
 `nu_in` is an array of observed frequency.
 
-`Input` has 20 arguments: <details>
-<summary>20 arguments <i>(click to expand/collapse)</i></summary>
+`Input` has 20 macro- and microphysics arguments.
+<details>
+<summary>parameters list <i>(click to expand/collapse)</i></summary>
 <br>
 
 - `1 E0` isotropic equivalent energy in erg
@@ -100,7 +101,11 @@ See `example/LC_sample.jl` for a simple example.
 
 </details>
 
-`Output` is an array of output observed flux:
+`Output` is an array of output observed flux.
+<details>
+<summary>arguments list <i>(click to expand/collapse)</i></summary>
+<br>
+
 - `1  FS e-synchrotron`    
 - `2  FS p-synchrotron`   
 - `3  FS e-SSC`           
@@ -120,9 +125,17 @@ See `example/LC_sample.jl` for a simple example.
 - `17 RS pg mu-neutrino`  
 - `18 RS pg pi0 gamma`    
 
-5 arguments of array `is_calc` expresses the radiation processes: 
+</details>
+
+5 arguments of array `is_calc` expresses the radiation processes.
+<details>
+<summary>arguments list <i>(click to expand/collapse)</i></summary>
+<br>
+
 - `1 electron synchrotron`
 - `2 proton synchrotron`
 - `3 electron SSC`
 - `4 pp collision`
 - `5 photo-meson interaction`
+
+</details>
