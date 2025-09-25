@@ -430,7 +430,7 @@ function calculate_radiation!(z,DL,time,epsiron_e,epsiron_B,p,f_e,epsiron_p,f_p,
             gamma_e[j]=10^gamma[j]
         end
         PDe=zeros(Float64,gamma_len)
-        particle_distribution!(epsiron_e,epsiron_B,p,f_e,B[i],N[i],G[i],Radius[i],gamma_m,gamma_c,PDe,gamma_e) 
+        particle_distribution!(epsiron_e,B[i]*B[i]/(8.0*pi*E[i]),p,f_e,B[i],N[i],G[i],Radius[i],gamma_m,gamma_c,PDe,gamma_e) 
 
         # Calculate e-synchrotron radiation
         nu=collect(LinRange(6,24,Int((24-6)/delta_nu)+1))
