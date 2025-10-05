@@ -17,7 +17,7 @@ Statistics = "1"
 PyPlot = "2"
 PyCall = "1"
 Printf = "1"
-JSON = "0.21"
+JSON = "1"
 DelimitedFiles = "1"
 
 [extras]
