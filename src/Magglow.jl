@@ -452,7 +452,7 @@ function calculate_radiation!(z,DL,time,epsiron_e,epsiron_B,p,f_e,epsiron_p,f_p,
 
         # proton distribution
         if is_calc[2] == true || is_calc[4] == true || is_calc[5] == true 
-            gamma_M=sqrt(6.0*pi*e/sigma_T/B[i]*(mp/me)^2)
+            gamma_M=min(sqrt(6.0*pi*e/sigma_T/B[i]*(mp/me)^2), e*B[i]*Delta[i]/(mp*1.6e-12))
             gamma_m=max((p-2.0)/(p-1.0)*epsiron_p/f_p/(mp*1.6e-12)*(E[i]/N[i]),1.0)
             gamma_c*=(mp/me)^3
             gamma_len=20*(1+Int(floor(log10(gamma_M))))
