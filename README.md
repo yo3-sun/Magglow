@@ -3,7 +3,7 @@
 <img align="left" width="422" height="321" alt="Image" src="https://github.com/user-attachments/assets/d63eb294-e4f5-47cd-b972-8359382bf4f8" />
 
 **Magglow** is a Julia module to calculate Gamma-ray Burst (GRB) afterglow light curves and spectra based on Magnetic Bullet model [Y. Kusafuka & K. Asano (2024)](https://ui.adsabs.harvard.edu/abs/2025MNRAS.536.1822K/abstract). 
-The framework implements semi-analytic models for forward and reverse shock dynamics propagating in a stratified CSM and leptonic (synchrotron with self-absorption and self-Compton scattering with Klein-Nishina corrections) and hadronic (pp colisions and photomeson interactions) multimessenger emission mechnisms observed from arbitrary viewing angle.
+The framework implements semi-analytic models for forward and reverse shock dynamics propagating in a stratified CSM and leptonic (synchrotron with self-absorption and self-Compton scattering with Klein-Nishina corrections) and hadronic (pp colisions and photomeson interactions) multimessenger emission mechanisms observed from arbitrary viewing angle.
 
 Details of the methods can be found in [Y. Kusafuka, K. Obayashi, K. Asano, & R. Yamazaki (2025)](https://arxiv.org/abs/2508.13066). 
 
